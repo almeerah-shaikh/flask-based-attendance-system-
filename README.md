@@ -19,6 +19,7 @@ This is a Flask-based web application for managing student attendance, named aft
    python app.py
    ```
 3. Open your browser and go to `http://127.0.0.1:5000`
+<img width="622" height="582" alt="image" src="https://github.com/user-attachments/assets/e3802219-0e12-4ea5-938f-c5164acfd47a" />
 
 ## Project Structure
 ```
