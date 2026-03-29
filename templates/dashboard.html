@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard - Almeerah Student Attendance System</title>
+</head>
+<body>
+    <h2>Welcome to Almeerah Student Attendance System, {{ session['username'] }}</h2>
+    <a href="{{ url_for('logout') }}">Logout</a>
+    <h3>Add Student</h3>
+    <form method="post" action="{{ url_for('add_student') }}">
+        <input type="text" name="student_name" placeholder="Student Name" required>
+        <button type="submit">Add</button>
+    </form>
+    <h3>Students</h3>
+    <ul>
+        {% for student in students %}
+            <li>{{ student }}</li>
+        {% endfor %}
+    </ul>
+    <h3>Mark Attendance</h3>
+    <form method="post" action="{{ url_for('mark_attendance') }}">
+        <select name="student">
+            {% for student in students %}
+                <option value="{{ student }}">{{ student }}</option>
+            {% endfor %}
+        </select>
+        <label>
+            <input type="radio" name="status" value="Present" required> Present
+        </label>
+        <label>
+            <input type="radio" name="status" value="Absent" required> Absent
+        </label>
+        <button type="submit">Submit Attendance</button>
+    </form>
+    <h3>Attendance Records</h3>
+    <ul>
+        {% for record in attendance %}
+            <li>{{ record }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
