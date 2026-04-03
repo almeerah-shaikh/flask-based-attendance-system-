@@ -1,4 +1,4 @@
-# Almeerah Student Attendance System Web App (Flask)
+#  Student Attendance System Web App (Flask)
 
 This is a Flask-based web application for managing student attendance, named after Almeerah. It features user authentication, student management, and attendance tracking, all through a simple web interface. Data is stored in plain text files for easy setup and portability.
 
